@@ -8,7 +8,7 @@ echo " "
 sleep 2
 if [ ${UID} != 0 ]
 then
-	echo "you can now run this script"
+	echo "Great! You are a regular user. Sonarqube installation for centos 7 in progress..."
 
 else
 	echo "you need to run this as a regular user"
@@ -97,7 +97,7 @@ sudo yum install net-tools -y
 
 sleep 3
 echo " "
-echo "please use this link to connect to the SonarQube server through the browser. http://$(ifconfig eth1|head -2|tail -1|awk '{print $2}'):9000"
+echo "Please use this link to connect to the SonarQube server through the browser. http://$(ifconfig eth1|head -2|tail -1|awk '{print $2}'):9000"
 
 echo " "
 sleep 3
